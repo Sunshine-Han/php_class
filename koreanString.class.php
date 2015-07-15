@@ -49,23 +49,23 @@ class koreanClass{
 
 	private function getWhere_hangul($colum,$word,$index=1){
 		$where="";
-		if($word == 'ㄱ'){ 
+		if($word == 'ㄱ' || $word =='ㄲ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^(ㄱ|ㄲ)' OR ( substring(".$colum.",".$index.",1) >= '가'and  substring(".$colum.",".$index.",1) < '나' )) "; 
 		}else if($word == 'ㄴ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^ㄴ' OR (  substring(".$colum.",".$index.",1) >= '나'and  substring(".$colum.",".$index.",1) < '다' )) "; 
-		}else if($word == 'ㄷ'){ 
+		}else if($word == 'ㄷ' || $word =='ㄸ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^(ㄷ|ㄸ)' OR (  substring(".$colum.",".$index.",1) >= '다'and  substring(".$colum.",".$index.",1) < '라' )) "; 
 		}else if($word == 'ㄹ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^ㄹ' OR (  substring(".$colum.",".$index.",1) >= '라'and  substring(".$colum.",".$index.",1) < '마' )) "; 
 		}else if($word == 'ㅁ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^ㅁ' OR (  substring(".$colum.",".$index.",1) >= '마'and  substring(".$colum.",".$index.",1) < '바' )) "; 
-		}else if($word == 'ㅂ'){ 
+		}else if($word == 'ㅂ' || $word =='ㅃ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^ㅂ' OR (  substring(".$colum.",".$index.",1) >= '바'and  substring(".$colum.",".$index.",1) < '사' )) "; 
-		}else if($word == 'ㅅ'){ 
+		}else if($word == 'ㅅ' || $word == 'ㅆ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^(ㅅ|ㅆ)' OR (  substring(".$colum.",".$index.",1) >= '사'and  substring(".$colum.",".$index.",1) < '아' )) "; 
 		}else if($word == 'ㅇ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^ㅇ' OR (  substring(".$colum.",".$index.",1) >= '아'and  substring(".$colum.",".$index.",1) < '자' )) "; 
-		}else if($word == 'ㅈ'){ 
+		}else if($word == 'ㅈ' || $word =='ㅉ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^(ㅈ|ㅉ)' OR (  substring(".$colum.",".$index.",1) >= '자'and  substring(".$colum.",".$index.",1) < '차' )) "; 
 		}else if($word == 'ㅊ'){ 
 			$where = " and (substring(".$colum.",".$index.",1) RLIKE '^ㅊ' OR (  substring(".$colum.",".$index.",1) >= '차'and  substring(".$colum.",".$index.",1) < '카' )) "; 
